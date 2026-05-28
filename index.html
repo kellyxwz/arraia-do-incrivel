@@ -1,17 +1,497 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html class="scroll-smooth" lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARRAIÁ DO INCRIVÉL</title>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Arraiá do In-cri-vél | Gestão de Festas Juninas</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "inverse-surface": "#263238",
+                "surface-variant": "#d7e4ec",
+                "on-primary": "#ffffff",
+                "on-tertiary": "#ffffff",
+                "tertiary-fixed-dim": "#f8bd2a",
+                "on-secondary-fixed-variant": "#2c1a00",
+                "tertiary-container": "#e4c36a",
+                "on-primary-container": "#ffffff",
+                "primary-fixed-dim": "#ffb27d",
+                "outline": "#71787e",
+                "on-tertiary-container": "#241a00",
+                "primary-container": "#e65100",
+                "on-surface-variant": "#41484d",
+                "on-secondary-container": "#ffffff",
+                "outline-variant": "#c1c7ce",
+                "surface-container-high": "#e7edf3",
+                "fixed-dim": "#ffb27d",
+                "on-surface": "#191c1e",
+                "secondary-fixed": "#ffddb1",
+                "on-secondary": "#ffffff",
+                "primary-fixed": "#ffdbca",
+                "secondary-fixed-dim": "#f1be7e",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-fixed": "#ffe08c",
+                "secondary-container": "#ff9800",
+                "on-primary-fixed-variant": "#622100",
+                "light-surface-container": "#f0f4f8",
+                "surface-container-low": "#f0f4f8",
+                "surface-container-highest": "#e1e2e5",
+                "inverse-on-surface": "#f0f0f3",
+                "surface-bright": "#f9f9fc",
+                "surface-variant-light": "#f0f4f8",
+                "on-inverse-surface": "#f0f0f3",
+                "light-surface-container-low": "#f0f4f8",
+                "inverse-primary": "#ffb68f",
+                "light-surface-container-high": "#e7edf3",
+                "on-tertiary-fixed-variant": "#241a00",
+                "surface-container": "#ecf0f5",
+                "on-primary-fixed": "#351000",
+                "primary": "#ff6f00",
+                "secondary": "#e65100",
+                "surface-dim": "#d9dbde",
+                "tertiary": "#ffb300",
+                "on-secondary-fixed": "#2c1a00",
+                "background": "#fffbf7",
+                "on-tertiary-fixed": "#241a00",
+                "scrim": "#000000",
+                "surface": "#fffbf7",
+                "error-container": "#ffdad6",
+                "on-error-container": "#410002",
+                "error": "#ba1a1a",
+                "on-error": "#ffffff"
+            },
+            "spacing": {
+                "sm": "12px",
+                "md": "24px",
+                "lg": "48px",
+                "xl": "64px",
+                "margin-mobile": "16px",
+                "margin-desktop": "120px",
+                "base": "16px"
+            }
+          }
+        }
+      }
+    </script>
+
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <div class="caixa">
-        <h1>alteração de teste</h1>
-        <p>Este é um teste de HTML simples e direto.</p>
-        <button onclick="alert('Funciona perfeitamente!')">Clique Aqui</button>
+
+<body class="bg-background text-on-surface font-['Montserrat'] min-h-screen selection:bg-primary-fixed-dim">
+
+    <header class="fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md z-40 border-b border-outline-variant/30">
+        <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop h-20 flex items-center justify-between">
+            <a class="flex items-center gap-2 font-['Bricolage_Grotesque'] text-headline-md text-primary font-bold" href="#">
+                <span class="material-symbols-outlined text-secondary text-3xl">local_fire_department</span>
+                <span>Arraiá do In-cri-vél</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-md font-medium text-label-lg">
+                <a class="hover:text-primary transition-colors" href="#solucao">A Solução</a>
+                <a class="hover:text-primary transition-colors" href="#como-funciona">Como Funciona</a>
+                <a class="hover:text-primary transition-colors" href="#precos">Preços</a>
+                <a class="bg-primary hover:bg-primary-container text-on-primary px-md py-3 rounded-full shadow-md transition-all font-semibold" href="#contato">Pedir Demonstração</a>
+            </nav>
+            
+            <button class="md:hidden text-primary p-2" id="mobile-menu-toggle">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="fixed inset-0 bg-background z-50 flex-col p-lg hidden" id="mobile-menu">
+        <div class="flex justify-between items-center w-full mb-xl">
+            <span class="font-['Bricolage_Grotesque'] text-headline-md text-primary font-bold">Menu</span>
+            <button class="text-primary p-2" id="mobile-menu-close">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+        </div>
+        <div class="flex flex-col gap-lg font-['Bricolage_Grotesque'] font-bold">
+            <a class="text-headline-md text-on-primary-container mobile-nav-link" href="#solucao">A Solução</a>
+            <a class="text-headline-md text-on-primary-container mobile-nav-link" href="#como-funciona">Como Funciona</a>
+            <a class="text-headline-md text-on-primary-container mobile-nav-link" href="#precos">Preços</a>
+            <a class="bg-primary px-xl py-4 rounded-full text-on-primary font-headline-md mobile-nav-link text-center" href="#contato">Pedir Demo</a>
+        </div>
     </div>
 
+  <main class="pt-28 md:pt-36 max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex flex-col gap-xl">
 
+    <!-- VARAL DE BANDEIRINHAS INTERATIVAS (COM BALÕES COLORIDOS) -->
+<div class="flex justify-center items-center gap-2 my-4 select-none">
+    <!-- Linha do varal esquerda -->
+    <div class="h-[2px] bg-gradient-to-r from-transparent to-outline-variant/50 flex-1"></div>
+    
+    <!-- Bandeirinha 1 (Milho) - Balão Laranja -->
+    <div class="group relative bg-primary text-on-primary font-bold text-lg px-4 py-3 bandeirinha-clip transform hover:-translate-y-2 hover:bg-secondary transition-all duration-200 cursor-help">
+        🌽
+        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-orange-600 text-white font-semibold text-label-xs px-2 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Quentinho!</span>
+    </div>
+    
+    <!-- Bandeirinha 2 (Fogueira) - Balão Vermelho -->
+    <div class="group relative bg-secondary text-on-secondary font-bold text-lg px-4 py-3 bandeirinha-clip transform hover:-translate-y-2 hover:bg-primary transition-all duration-200 cursor-help">
+        🔥
+        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-red-600 text-white font-semibold text-label-xs px-2 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Arraiá Tech!</span>
+    </div>
+
+    <!-- Bandeirinha 3 (Pipoca) - Balão Amarelo/Âmbar -->
+    <div class="group relative bg-tertiary text-on-tertiary font-bold text-lg px-4 py-3 bandeirinha-clip transform hover:-translate-y-2 hover:bg-secondary transition-all duration-200 cursor-help">
+        🍿
+        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-amber-500 text-slate-900 font-bold text-label-xs px-2 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Sem Filas!</span>
+    </div>
+
+    <!-- Bandeirinha 4 (Alvo) - Balão Azul -->
+    <div class="group relative bg-primary text-on-primary font-bold text-lg px-4 py-3 bandeirinha-clip transform hover:-translate-y-2 hover:bg-tertiary transition-all duration-200 cursor-help">
+        🎯
+        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-blue-600 text-white font-semibold text-label-xs px-2 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Pescaria Digital!</span>
+    </div>
+
+    <!-- Linha do varal direita -->
+    <div class="h-[2px] bg-gradient-to-l from-transparent to-outline-variant/50 flex-1"></div>
+</div>
+
+            <div class="h-[2px] bg-gradient-to-l from-transparent to-outline-variant/50 flex-1"></div>
+        </div>
+        
+        <section id="inicio" class="grid grid-cols-1 md:grid-cols-2 gap-md items-center py-lg">
+            <div class="flex flex-col gap-sm">
+                <span class="text-label-lg uppercase tracking-wider text-secondary font-semibold">
+                    🔥 Gestão Inteligente para Festas Juninas
+                </span>
+                <h1 class="text-display text-primary font-headline-lg font-['Bricolage_Grotesque'] font-bold">
+                    Multiplique o lucro do seu Arraiá e acabe com as filas!
+                </h1>
+                <p class="text-body-lg text-on-surface-variant leading-relaxed">
+                    O <strong>Arraiá do In-cri-vél</strong> é a solução digital definitiva para escolas, igrejas e empresas. Seus visitantes compram fichas virtuais direto pelo celular, liberando suas barracas para vender muito mais.
+                </p>
+                <div class="flex flex-wrap gap-base mt-sm">
+                    <a href="#contato" class="bg-primary hover:bg-primary-container text-on-primary font-semibold px-md py-4 rounded-full shadow-lg transition-all text-center">
+                        Quero no meu Evento
+                    </a>
+                    <a href="#como-funciona" class="border-2 border-outline hover:bg-surface-container text-outline font-semibold px-md py-4 rounded-full text-center transition-colors">
+                        Ver como funciona
+                    </a>
+                </div>
+            </div>
+            
+
+            <div class="relative flex justify-center">
+                <div class="glass-card ambient-shadow rounded-xl p-md max-w-md w-full relative z-10 border-t-4 border-primary">
+                    <div class="absolute -top-4 left-6 bg-secondary text-on-secondary px-sm py-1 text-label-sm bandeirinha-clip font-semibold">
+                        NOVIDADE
+                    </div>
+                    <h3 class="text-headline-md text-inverse-surface mt-2 font-['Bricolage_Grotesque'] font-bold">Fichas 100% Digitais</h3>
+                    <p class="text-body-md text-on-surface-variant mt-2 leading-relaxed">
+                        Menos dinheiro físico circulando, mais segurança para seu caixa e relatórios em tempo real do faturamento de cada barraca.
+                    </p>
+                    <div class="mt-md bg-surface-container rounded-lg p-sm flex items-center gap-sm">
+                        <span class="material-symbols-outlined text-primary text-3xl">trending_up</span>
+                        <span class="text-label-lg text-on-surface font-bold">Média de +30% em faturamento nos eventos</span>
+                    </div>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-tr from-secondary/20 to-transparent rounded-full filter blur-3xl -z-10"></div>
+            </div>
+        </section>
+        
+
+        <hr class="border-outline-variant/30">
+
+        <section id="solucao" class="py-lg flex flex-col gap-md">
+            <div class="text-center max-w-2xl mx-auto flex flex-col gap-sm">
+                <h2 class="text-headline-xl text-primary font-['Bricolage_Grotesque'] font-bold">Uma experiência in-cri-vél para todos</h2>
+                <p class="text-body-lg text-on-surface-variant">Veja como a nossa plataforma resolve os problemas de ponta a ponta do seu evento.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-md mt-sm">
+                <div class="bg-surface-container rounded-2xl p-md border border-outline-variant/40 hover:border-primary/50 transition-all flex flex-col gap-sm">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-3xl">analytics</span>
+                    </div>
+                    <h3 class="text-headline-sm font-['Bricolage_Grotesque'] font-bold text-on-surface">Para o Organizador</h3>
+                    <p class="text-body-md text-on-surface-variant leading-relaxed">
+                        Gerencie o evento de onde estiver. Acompanhe gráficos de vendas em tempo real, gerencie estoques e elimine completamente os desvios de caixa.
+                    </p>
+                </div>
+
+                <div class="bg-surface-container rounded-2xl p-md border border-outline-variant/40 hover:border-primary/50 transition-all flex flex-col gap-sm">
+                    <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary">
+                        <span class="material-symbols-outlined text-3xl">storefront</span>
+                    </div>
+                    <h3 class="text-headline-sm font-['Bricolage_Grotesque'] font-bold text-on-surface">Para o Barraqueiro</h3>
+                    <p class="text-body-md text-on-surface-variant leading-relaxed">
+                        Atendimento ultra-rápido. O barraqueiro só precisa escanear o QR Code no celular do cliente para validar a ficha digital. Sem perder tempo contando troco.
+                    </p>
+                </div>
+                
+
+                <div class="bg-surface-container rounded-2xl p-md border border-outline-variant/40 hover:border-primary/50 transition-all flex flex-col gap-sm">
+                    <div class="w-12 h-12 bg-tertiary/20 rounded-xl flex items-center justify-center text-on-tertiary-container">
+                        <span class="material-symbols-outlined text-3xl">qr_code_scanner</span>
+                    </div>
+                    <h3 class="text-headline-sm font-['Bricolage_Grotesque'] font-bold text-on-surface">Para o Visitante</h3>
+                    <p class="text-body-md text-on-surface-variant leading-relaxed">
+                        Chega de pegar filas gigantes embaixo do sol. Ele compra os créditos via Pix direto no celular e vai direto para a fila de consumo da barraca.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-outline-variant/30">
+
+        <section id="como-funciona" class="py-lg flex flex-col gap-md">
+            <div class="text-center max-w-2xl mx-auto">
+                <h2 class="text-headline-xl text-primary font-['Bricolage_Grotesque'] font-bold">Passo a Passo Simples</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-base text-center">
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">1</div>
+                    <h4 class="font-bold font-['Bricolage_Grotesque']">Cadastre o Evento</h4>
+                    <p class="text-body-sm text-on-surface-variant">Você define os preços e as barracas em minutos.</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">2</div>
+                    <h4 class="font-bold font-['Bricolage_Grotesque']">Espalhe os Totens</h4>
+                    <p class="text-body-sm text-on-surface-variant">Placas com QR Code espalhadas pela festa para o público acessar.</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">3</div>
+                    <h4 class="font-bold font-['Bricolage_Grotesque']">Venda via PIX</h4>
+                    <p class="text-body-sm text-on-surface-variant">O cliente compra as fichas virtuais sem instalar nada.</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">4</div>
+                    <h4 class="font-bold font-['Bricolage_Grotesque']">Valide na Barraca</h4>
+                    <p class="text-body-sm text-on-surface-variant">O barraqueiro bipa o celular do cliente e entrega o produto.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-outline-variant/30">
+
+        <section id="precos" class="py-lg flex flex-col gap-md">
+            <div class="text-center max-w-2xl mx-auto flex flex-col gap-sm">
+                <h2 class="text-headline-xl text-primary font-['Bricolage_Grotesque'] font-bold">Planos sob medida para seu Arraiá</h2>
+                <p class="text-body-lg text-on-surface-variant">Escolha o modelo ideal para o tamanho da sua festança.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-md max-w-4xl mx-auto w-full mt-sm">
+                <div class="bg-surface-container rounded-2xl p-md border border-outline-variant/40 flex flex-col justify-between gap-md">
+                    <div class="flex flex-col gap-sm">
+                        <span class="text-label-md uppercase tracking-wider text-outline font-bold">Ideal para Pequenos Eventos</span>
+                        <h3 class="text-headline-lg font-['Bricolage_Grotesque'] font-bold text-on-surface">Por Taxa</h3>
+                        <div class="flex items-baseline gap-1 my-2">
+                            <span class="text-headline-xl font-bold text-primary">3,5%</span>
+                            <span class="text-body-md text-on-surface-variant">por ficha vendida</span>
+                        </div>
+                        <p class="text-body-sm text-on-surface-variant">Sem custo fixo de ativação. Você só paga uma pequena porcentagem sobre o que o seu evento faturar.</p>
+                        <ul class="flex flex-col gap-2 mt-sm text-body-sm text-on-surface-variant">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Barracas ilimitadas</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Painel do organizador completo</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Suporte por e-mail</li>
+                        </ul>
+                    </div>
+                    <a href="#contato" class="border-2 border-primary hover:bg-primary/5 text-primary text-center font-semibold py-3 rounded-full transition-colors mt-sm">Contratar Taxa</a>
+                </div>
+
+                <div class="bg-surface-container border-2 border-primary rounded-2xl p-md shadow-md flex flex-col justify-between gap-md relative">
+                    <div class="absolute -top-3.5 right-6 bg-primary text-on-primary text-label-sm font-bold px-sm py-1 rounded-full">MAIS VENDIDO</div>
+                    <div class="flex flex-col gap-sm">
+                        <span class="text-label-md uppercase tracking-wider text-secondary font-bold">Grandes Festas e Escolas</span>
+                        <h3 class="text-headline-lg font-['Bricolage_Grotesque'] font-bold text-on-surface">Plano Fixo</h3>
+                        <div class="flex items-baseline gap-1 my-2">
+                            <span class="text-body-lg font-bold text-on-surface">R$</span>
+                            <span class="text-headline-xl font-bold text-primary">499</span>
+                            <span class="text-body-md text-on-surface-variant">/evento único</span>
+                        </div>
+                        <p class="text-body-sm text-on-surface-variant">Taxa única para eventos de grande porte. Fique com 100% do valor de todas as fichas que vender.</p>
+                        <ul class="flex flex-col gap-2 mt-sm text-body-sm text-on-surface-variant">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Tudo do plano anterior</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Suporte via WhatsApp no dia da festa</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Treinamento em vídeo para barraqueiros</li>
+                        </ul>
+                    </div>
+                    <a href="#contato" class="bg-primary hover:bg-primary-container text-on-primary text-center font-semibold py-3 rounded-full shadow-md transition-all mt-sm">Contratar Fixo</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-md items-center">
+        
+        
+        <div class="flex flex-col gap-sm">
+            <span class="text-label-md uppercase tracking-wider text-primary font-bold">✨ Tecnologia Exclusiva</span>
+            <h2 class="text-headline-xl text-on-surface font-['Bricolage_Grotesque'] font-bold">Controle total na palma da sua mão</h2>
+            <p class="text-body-md text-on-surface-variant">
+                Chega de planilhas confusas no fim da noite. Nosso painel mostra quais comidas estão saindo mais, o pico de vendas por horário e o faturamento total em tempo real.
+            </p>
+            <div class="flex flex-col gap-2 mt-2">
+                <div class="flex items-center gap-2 text-body-sm font-semibold text-secondary">
+                    <span class="material-symbols-outlined">bolt</span> Passe o mouse nas barras ao lado para testar
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-inverse-surface text-inverse-on-surface rounded-2xl p-md shadow-xl flex flex-col gap-base font-sans">
+            <div class="flex justify-between items-center border-b border-outline/30 pb-2">
+                <span class="text-label-md font-bold tracking-wider text-primary">📊 ARRAIÁ DASHBOARD</span>
+                <span class="bg-error text-on-error text-label-xs px-2 py-0.5 rounded-full font-bold animate-pulse">● AO VIVO</span>
+            </div>
+            
+            <div class="flex flex-col gap-sm">
+                <!-- Barraca 1 -->
+                <div class="flex flex-col gap-1 group">
+                    <div class="flex justify-between text-body-sm">
+                        <span>🍿 Barraca da Pipoca & Canjica</span>
+                        <span class="font-bold text-primary group-hover:scale-110 transition-transform">R$ 2.450,00</span>
+                    </div>
+                    <div class="w-full bg-outline-variant/20 h-3 rounded-full overflow-hidden">
+                        <div class="bg-primary h-full rounded-full w-[85%] transition-all duration-500 group-hover:bg-secondary group-hover:w-full"></div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-1 group">
+                    <div class="flex justify-between text-body-sm">
+                        <span>🎯 Brincadeiras (Pescaria/Argola)</span>
+                        <span class="font-bold text-tertiary-fixed-dim group-hover:scale-110 transition-transform">R$ 1.890,00</span>
+                    </div>
+                    <div class="w-full bg-outline-variant/20 h-3 rounded-full overflow-hidden">
+                        <div class="bg-tertiary h-full rounded-full w-[65%] transition-all duration-500 group-hover:bg-tertiary-container group-hover:w-[80%]"></div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-1 group">
+                    <div class="flex justify-between text-body-sm">
+                        <span>🔥 Quentão & Bebidas</span>
+                        <span class="font-bold text-secondary group-hover:scale-110 transition-transform">R$ 3.120,00</span>
+                    </div>
+                    <div class="w-full bg-outline-variant/20 h-3 rounded-full overflow-hidden">
+                        <div class="bg-secondary h-full rounded-full w-[95%] transition-all duration-500 group-hover:w-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+        <hr class="border-outline-variant/30">
+
+        <section id="contato" class="py-lg max-w-xl mx-auto w-full flex flex-col gap-md">
+            <div class="text-center flex flex-col gap-sm">
+                <h2 class="text-headline-xl text-primary font-['Bricolage_Grotesque'] font-bold">Leve o Arraiá para sua festa</h2>
+                <p class="text-body-lg text-on-surface-variant">Preencha os dados abaixo e nossa equipe entrará em contato para liberar seu acesso.</p>
+            </div>
+
+<form id="form-conversao" class="bg-surface-container rounded-2xl p-md border border-outline-variant/40 flex flex-col gap-base shadow-sm">
+    <div class="flex flex-col gap-2">
+        <label for="nome" class="text-label-lg font-semibold text-on-surface">Seu Nome</label>
+        <input type="text" id="nome" required placeholder="Ex: Maria Silva" class="rounded-xl border-outline-variant bg-background p-3 focus:border-primary focus:ring-primary text-body-md">
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-base">
+        <div class="flex flex-col gap-2">
+            <label for="email" class="text-label-lg font-semibold text-on-surface">E-mail Corporativo/Pessoal</label>
+            <input type="email" id="email" required placeholder="maria@escola.com" class="rounded-xl border-outline-variant bg-background p-3 focus:border-primary focus:ring-primary text-body-md">
+        </div>
+        <div class="flex flex-col gap-2">
+            <label for="telefone" class="text-label-lg font-semibold text-on-surface">WhatsApp para Contato</label>
+            <input type="tel" id="telefone" required placeholder="(61) 99999-9999" class="rounded-xl border-outline-variant bg-background p-3 focus:border-primary focus:ring-primary text-body-md">
+        </div>
+    </div>
+
+    <div class="flex flex-col gap-2">
+        <label for="tipo-evento" class="text-label-lg font-semibold text-on-surface">Quem está contratando?</label>
+        <select id="tipo-evento" class="rounded-xl border-outline-variant bg-background p-3 focus:border-primary focus:ring-primary text-body-md">
+            <option value="escola">Escola (Pública ou Particular)</option>
+            <option value="igreja">Igreja / Paróquia</option>
+            <option value="empresa">Empresa / Festa Corporativa</option>
+            <option value="outro">Outro tipo de evento</option>
+        </select>
+    </div>
+
+    <div class="flex flex-col gap-2">
+        <label for="mensagem" class="text-label-lg font-semibold text-on-surface">Conte um pouco sobre o evento (Opcional)</label>
+        <textarea id="mensagem" rows="3" placeholder="Quantidade estimada de pessoas, data do evento..." class="rounded-xl border-outline-variant bg-background p-3 focus:border-primary focus:ring-primary text-body-md"></textarea>
+    </div>
+
+    <button type="submit" class="bg-primary hover:bg-primary-container text-on-primary font-bold py-4 rounded-full shadow-lg transition-all mt-2 text-center">
+        Solicitar Demonstração Gratuita
+    </button>
+</form>
+       <section id="depoimentos" class="py-lg flex flex-col gap-md">
+    <div class="text-center flex flex-col gap-sm">
+        <h2 class="text-headline-xl text-primary font-['Bricolage_Grotesque'] font-bold">Quem usa, aprova!</h2>
+        <!-- Botões de Controle do Filtro -->
+        <div class="flex justify-center gap-base mt-2">
+            <button id="btn-org" class="bg-primary text-on-primary px-md py-2 rounded-full font-semibold text-label-md shadow-md transition-all">
+                Ver Diretores/Organizadores
+            </button>
+            <button id="btn-bar" class="bg-surface-container text-on-surface hover:bg-surface-container-high px-md py-2 rounded-full font-semibold text-label-md transition-all">
+                Ver Barraqueiros
+            </button>
+        </div>
+    </div>
+
+    
+    <div class="max-w-2xl mx-auto w-full min-h-[180px]">
+        <div id="depoimento-conteudo-org" class="bg-surface-container rounded-2xl p-md border border-outline-variant/40 flex flex-col gap-sm transition-all duration-300">
+            <span class="material-symbols-outlined text-primary text-headline-xl">format_quote</span>
+            <p class="text-body-lg italic text-on-surface-variant">
+                "Arrecadamos 35% a mais na nossa festa junina paroquial deste ano. O sumiço de dinheiro acabou e o fechamento do caixa, que antes demorava a madrugada toda, foi feito em apenas 10 minutos pelo sistema!"
+            </p>
+            <h4 class="font-bold text-on-surface font-['Bricolage_Grotesque'] mt-2">Padre Athos — Paróquia de São João</h4>
+        </div>
+
+        <div id="depoimento-conteudo-bar" class="bg-surface-container rounded-2xl p-md border border-outline-variant/40 flex flex-col gap-sm transition-all duration-300 hidden">
+            <span class="material-symbols-outlined text-secondary text-headline-xl">format_quote</span>
+            <p class="text-body-lg italic text-on-surface-variant">
+                "No começo achei que ia ser difícil mexer no celular, mas é muito simples. Só precisei apontar a câmera pro celular do cliente e pronto, a venda tava validada. Não precisei ficar tocando em dinheiro sujo enquanto mexia com os espetinhos."
+            </p>
+            <h4 class="font-bold text-on-surface font-['Bricolage_Grotesque'] mt-2">Dona luyza — Barraca do Espetinho</h4>
+        </div>
+    </div>
+</section>
+
+ <hr class="border-outline-variant/30">
+
+
+<footer class="mt-20 mb-10 w-full flex flex-col gap-base items-center text-center">
+    
+    <div class="flex justify-center items-center w-full max-w-md h-3 gap-1 overflow-hidden opacity-80 mb-2">
+        <div class="bg-primary flex-1 h-full bandeirinha-clip"></div>
+        <div class="bg-secondary flex-1 h-full bandeirinha-clip"></div>
+        <div class="bg-tertiary flex-1 h-full bandeirinha-clip"></div>
+        <div class="bg-orange-600 flex-1 h-full bandeirinha-clip"></div>
+        <div class="bg-red-600 flex-1 h-full bandeirinha-clip"></div>
+        <div class="bg-amber-500 flex-1 h-full bandeirinha-clip"></div>
+        <div class="bg-blue-600 flex-1 h-full bandeirinha-clip"></div>
+    </div>
+
+    <div class="flex flex-col gap-1">
+        <span class="text-label-sm uppercase tracking-widest text-outline font-bold">Desenvolvido por</span>
+        
+        <div class="flex flex-wrap justify-center gap-x-md gap-y-1 text-body-sm text-on-surface-variant font-medium">
+            <span class="hover:text-primary transition-colors"> Kelly <span class="text-xs text-outline/60">(202611627)</span></span>
+            <span class="hover:text-secondary transition-colors"> Athos <span class="text-xs text-outline/60">(202611639)</span></span>
+            <span class="hover:text-tertiary transition-colors"> Vinnicius <span class="text-xs text-outline/60">(202611713)</span></span>
+            <span class="hover:text-orange-600 transition-colors"> Ana Clara <span class="text-xs text-outline/60">(202610803)</span></span>
+            <span class="hover:text-red-600 transition-colors">Luyza <span class="text-xs text-outline/60">(202611647)</span></span>
+        </div>
+    </div>
+
+    <p class="text-label-xs text-outline/40 mt-2">© 2026 Arraiá do In-cri-vél. Projeto Acadêmico.</p>
+</footer>
+
+
+
+    </main>
+    
+
+    <script src="js/menu.js"></script>
 </body>
 </html>
