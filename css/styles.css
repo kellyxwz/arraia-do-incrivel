@@ -20,23 +20,3 @@
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 85%, 0% 100%);
 }
 
-@media (max-width: 768px) {
-    /* 1. Para centralizar o texto chamativo */
-    .seu-texto-chamativo {
-        text-align: center;
-        width: 100%; /* Garante que ele ocupe a largura total para alinhar no centro */
-    }
-
-    /* 2. Para reduzir o espaço em branco */
-    /* Zere ou diminua a margem inferior das bandeiras... */
-    .suas-bandeiras {
-        margin-bottom: 10px; 
-        padding-bottom: 0;
-    }
-
-    /* ...ou a margem superior do texto chamativo */
-    .seu-texto-chamativo {
-        margin-top: 10px; 
-        padding-top: 0;
-    }
-}
