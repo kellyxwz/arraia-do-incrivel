@@ -121,6 +121,42 @@
     </div>
 
   <main class="pt-28 md:pt-36 max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex flex-col gap-xl">
+
+    <!-- VARAL DE BANDEIRINHAS INTERATIVAS (COM BALÕES COLORIDOS) -->
+<div class="flex justify-center items-center gap-2 my-4 select-none">
+    <!-- Linha do varal esquerda -->
+    <div class="h-[2px] bg-gradient-to-r from-transparent to-outline-variant/50 flex-1"></div>
+    
+    <!-- Bandeirinha 1 (Milho) - Balão Laranja -->
+    <div class="group relative bg-primary text-on-primary font-bold text-lg px-4 py-3 bandeirinha-clip transform hover:-translate-y-2 hover:bg-secondary transition-all duration-200 cursor-help">
+        🌽
+        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-orange-600 text-white font-semibold text-label-xs px-2 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Quentinho!</span>
+    </div>
+    
+    <!-- Bandeirinha 2 (Fogueira) - Balão Vermelho -->
+    <div class="group relative bg-secondary text-on-secondary font-bold text-lg px-4 py-3 bandeirinha-clip transform hover:-translate-y-2 hover:bg-primary transition-all duration-200 cursor-help">
+        🔥
+        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-red-600 text-white font-semibold text-label-xs px-2 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Arraiá Tech!</span>
+    </div>
+
+    <!-- Bandeirinha 3 (Pipoca) - Balão Amarelo/Âmbar -->
+    <div class="group relative bg-tertiary text-on-tertiary font-bold text-lg px-4 py-3 bandeirinha-clip transform hover:-translate-y-2 hover:bg-secondary transition-all duration-200 cursor-help">
+        🍿
+        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-amber-500 text-slate-900 font-bold text-label-xs px-2 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Sem Filas!</span>
+    </div>
+
+    <!-- Bandeirinha 4 (Alvo) - Balão Azul -->
+    <div class="group relative bg-primary text-on-primary font-bold text-lg px-4 py-3 bandeirinha-clip transform hover:-translate-y-2 hover:bg-tertiary transition-all duration-200 cursor-help">
+        🎯
+        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-blue-600 text-white font-semibold text-label-xs px-2 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Pescaria Digital!</span>
+    </div>
+
+    <!-- Linha do varal direita -->
+    <div class="h-[2px] bg-gradient-to-l from-transparent to-outline-variant/50 flex-1"></div>
+</div>
+
+            <div class="h-[2px] bg-gradient-to-l from-transparent to-outline-variant/50 flex-1"></div>
+        </div>
         
         <section id="inicio" class="grid grid-cols-1 md:grid-cols-2 gap-md items-center py-lg">
             <div class="flex flex-col gap-sm">
@@ -142,6 +178,7 @@
                     </a>
                 </div>
             </div>
+            
 
             <div class="relative flex justify-center">
                 <div class="glass-card ambient-shadow rounded-xl p-md max-w-md w-full relative z-10 border-t-4 border-primary">
@@ -160,6 +197,7 @@
                 <div class="absolute inset-0 bg-gradient-to-tr from-secondary/20 to-transparent rounded-full filter blur-3xl -z-10"></div>
             </div>
         </section>
+        
 
         <hr class="border-outline-variant/30">
 
@@ -189,6 +227,7 @@
                         Atendimento ultra-rápido. O barraqueiro só precisa escanear o QR Code no celular do cliente para validar a ficha digital. Sem perder tempo contando troco.
                     </p>
                 </div>
+                
 
                 <div class="bg-surface-container rounded-2xl p-md border border-outline-variant/40 hover:border-primary/50 transition-all flex flex-col gap-sm">
                     <div class="w-12 h-12 bg-tertiary/20 rounded-xl flex items-center justify-center text-on-tertiary-container">
@@ -282,6 +321,64 @@
             </div>
         </section>
 
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-md items-center">
+        
+        
+        <div class="flex flex-col gap-sm">
+            <span class="text-label-md uppercase tracking-wider text-primary font-bold">✨ Tecnologia Exclusiva</span>
+            <h2 class="text-headline-xl text-on-surface font-['Bricolage_Grotesque'] font-bold">Controle total na palma da sua mão</h2>
+            <p class="text-body-md text-on-surface-variant">
+                Chega de planilhas confusas no fim da noite. Nosso painel mostra quais comidas estão saindo mais, o pico de vendas por horário e o faturamento total em tempo real.
+            </p>
+            <div class="flex flex-col gap-2 mt-2">
+                <div class="flex items-center gap-2 text-body-sm font-semibold text-secondary">
+                    <span class="material-symbols-outlined">bolt</span> Passe o mouse nas barras ao lado para testar
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-inverse-surface text-inverse-on-surface rounded-2xl p-md shadow-xl flex flex-col gap-base font-sans">
+            <div class="flex justify-between items-center border-b border-outline/30 pb-2">
+                <span class="text-label-md font-bold tracking-wider text-primary">📊 ARRAIÁ DASHBOARD</span>
+                <span class="bg-error text-on-error text-label-xs px-2 py-0.5 rounded-full font-bold animate-pulse">● AO VIVO</span>
+            </div>
+            
+            <div class="flex flex-col gap-sm">
+                <!-- Barraca 1 -->
+                <div class="flex flex-col gap-1 group">
+                    <div class="flex justify-between text-body-sm">
+                        <span>🍿 Barraca da Pipoca & Canjica</span>
+                        <span class="font-bold text-primary group-hover:scale-110 transition-transform">R$ 2.450,00</span>
+                    </div>
+                    <div class="w-full bg-outline-variant/20 h-3 rounded-full overflow-hidden">
+                        <div class="bg-primary h-full rounded-full w-[85%] transition-all duration-500 group-hover:bg-secondary group-hover:w-full"></div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-1 group">
+                    <div class="flex justify-between text-body-sm">
+                        <span>🎯 Brincadeiras (Pescaria/Argola)</span>
+                        <span class="font-bold text-tertiary-fixed-dim group-hover:scale-110 transition-transform">R$ 1.890,00</span>
+                    </div>
+                    <div class="w-full bg-outline-variant/20 h-3 rounded-full overflow-hidden">
+                        <div class="bg-tertiary h-full rounded-full w-[65%] transition-all duration-500 group-hover:bg-tertiary-container group-hover:w-[80%]"></div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-1 group">
+                    <div class="flex justify-between text-body-sm">
+                        <span>🔥 Quentão & Bebidas</span>
+                        <span class="font-bold text-secondary group-hover:scale-110 transition-transform">R$ 3.120,00</span>
+                    </div>
+                    <div class="w-full bg-outline-variant/20 h-3 rounded-full overflow-hidden">
+                        <div class="bg-secondary h-full rounded-full w-[95%] transition-all duration-500 group-hover:w-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
         <hr class="border-outline-variant/30">
 
         <section id="contato" class="py-lg max-w-xl mx-auto w-full flex flex-col gap-md">
@@ -326,9 +423,74 @@
         Solicitar Demonstração Gratuita
     </button>
 </form>
-        </section>
+       <section id="depoimentos" class="py-lg flex flex-col gap-md">
+    <div class="text-center flex flex-col gap-sm">
+        <h2 class="text-headline-xl text-primary font-['Bricolage_Grotesque'] font-bold">Quem usa, aprova!</h2>
+        <!-- Botões de Controle do Filtro -->
+        <div class="flex justify-center gap-base mt-2">
+            <button id="btn-org" class="bg-primary text-on-primary px-md py-2 rounded-full font-semibold text-label-md shadow-md transition-all">
+                Ver Diretores/Organizadores
+            </button>
+            <button id="btn-bar" class="bg-surface-container text-on-surface hover:bg-surface-container-high px-md py-2 rounded-full font-semibold text-label-md transition-all">
+                Ver Barraqueiros
+            </button>
+        </div>
+    </div>
+
+    
+    <div class="max-w-2xl mx-auto w-full min-h-[180px]">
+        <div id="depoimento-conteudo-org" class="bg-surface-container rounded-2xl p-md border border-outline-variant/40 flex flex-col gap-sm transition-all duration-300">
+            <span class="material-symbols-outlined text-primary text-headline-xl">format_quote</span>
+            <p class="text-body-lg italic text-on-surface-variant">
+                "Arrecadamos 35% a mais na nossa festa junina paroquial deste ano. O sumiço de dinheiro acabou e o fechamento do caixa, que antes demorava a madrugada toda, foi feito em apenas 10 minutos pelo sistema!"
+            </p>
+            <h4 class="font-bold text-on-surface font-['Bricolage_Grotesque'] mt-2">Padre Athos — Paróquia de São João</h4>
+        </div>
+
+        <div id="depoimento-conteudo-bar" class="bg-surface-container rounded-2xl p-md border border-outline-variant/40 flex flex-col gap-sm transition-all duration-300 hidden">
+            <span class="material-symbols-outlined text-secondary text-headline-xl">format_quote</span>
+            <p class="text-body-lg italic text-on-surface-variant">
+                "No começo achei que ia ser difícil mexer no celular, mas é muito simples. Só precisei apontar a câmera pro celular do cliente e pronto, a venda tava validada. Não precisei ficar tocando em dinheiro sujo enquanto mexia com os espetinhos."
+            </p>
+            <h4 class="font-bold text-on-surface font-['Bricolage_Grotesque'] mt-2">Dona luyza — Barraca do Espetinho</h4>
+        </div>
+    </div>
+</section>
+
+ <hr class="border-outline-variant/30">
+
+
+<footer class="mt-20 mb-10 w-full flex flex-col gap-base items-center text-center">
+    
+    <div class="flex justify-center items-center w-full max-w-md h-3 gap-1 overflow-hidden opacity-80 mb-2">
+        <div class="bg-primary flex-1 h-full bandeirinha-clip"></div>
+        <div class="bg-secondary flex-1 h-full bandeirinha-clip"></div>
+        <div class="bg-tertiary flex-1 h-full bandeirinha-clip"></div>
+        <div class="bg-orange-600 flex-1 h-full bandeirinha-clip"></div>
+        <div class="bg-red-600 flex-1 h-full bandeirinha-clip"></div>
+        <div class="bg-amber-500 flex-1 h-full bandeirinha-clip"></div>
+        <div class="bg-blue-600 flex-1 h-full bandeirinha-clip"></div>
+    </div>
+
+    <div class="flex flex-col gap-1">
+        <span class="text-label-sm uppercase tracking-widest text-outline font-bold">Desenvolvido por</span>
+        
+        <div class="flex flex-wrap justify-center gap-x-md gap-y-1 text-body-sm text-on-surface-variant font-medium">
+            <span class="hover:text-primary transition-colors"> Kelly <span class="text-xs text-outline/60">(202611627)</span></span>
+            <span class="hover:text-secondary transition-colors"> Athos <span class="text-xs text-outline/60">(202611639)</span></span>
+            <span class="hover:text-tertiary transition-colors"> Vinnicius <span class="text-xs text-outline/60">(202611713)</span></span>
+            <span class="hover:text-orange-600 transition-colors"> Ana Clara <span class="text-xs text-outline/60">(202610803)</span></span>
+            <span class="hover:text-red-600 transition-colors">Luyza <span class="text-xs text-outline/60">(202611647)</span></span>
+        </div>
+    </div>
+
+    <p class="text-label-xs text-outline/40 mt-2">© 2026 Arraiá do In-cri-vél. Projeto Acadêmico.</p>
+</footer>
+
+
 
     </main>
+    
 
     <script src="js/menu.js"></script>
 </body>

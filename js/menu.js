@@ -30,4 +30,31 @@ if (form) {
         
         window.open(urlFinal, '_blank');
     });
+
+    const btnOrg = document.getElementById('btn-org');
+    const btnBar = document.getElementById('btn-bar');
+    const depOrg = document.getElementById('depoimento-conteudo-org');
+    const depBar = document.getElementById('depoimento-conteudo-bar');
+
+    if (btnOrg && btnBar && depOrg && depBar) {
+        btnOrg.addEventListener('click', () => {
+            // Ativa botão Org, desativa botão Bar
+            btnOrg.className = "bg-primary text-on-primary px-md py-2 rounded-full font-semibold text-label-md shadow-md transition-all";
+            btnBar.className = "bg-surface-container text-on-surface hover:bg-surface-container-high px-md py-2 rounded-full font-semibold text-label-md transition-all";
+            // Mostra Org, esconde Bar
+            depOrg.classList.remove('hidden');
+            depBar.classList.add('hidden');
+        });
+
+        btnBar.addEventListener('click', () => {
+            // Ativa botão Bar, desativa botão Org
+            btnBar.className = "bg-secondary text-on-secondary px-md py-2 rounded-full font-semibold text-label-md shadow-md transition-all";
+            btnOrg.className = "bg-surface-container text-on-surface hover:bg-surface-container-high px-md py-2 rounded-full font-semibold text-label-md transition-all";
+            // Mostra Bar, esconde Org
+            depBar.classList.remove('hidden');
+            depOrg.classList.add('hidden');
+        });
+    }
+
+
 }
