@@ -2,6 +2,8 @@
 
 > Sistema de gestão digital para festas juninas focado em eliminar filas e otimizar o faturamento de barraqueiros e organizadores.
 
+> Acesse o site para ver https://kellyxwz.github.io/arraia-do-incrivel/  
+
 ## 📌 Sobre o Projeto
 Este projeto foi desenvolvido como parte da disciplina de Design para Web. O objetivo é oferecer uma solução tecnológica para eventos juninos em escolas, igrejas e empresas, substituindo as antigas fichas de papel por créditos digitais via Pix.
 
